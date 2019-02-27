@@ -93,10 +93,9 @@ class PostsViewController: BaseViewController {
 extension PostsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print("EENE")
         let lastPost = viewModel.postHits.value.count - 1
         if !viewModel.isLoading && indexPath.row == lastPost {
-
+            loadMore()
         }
     }
 }
