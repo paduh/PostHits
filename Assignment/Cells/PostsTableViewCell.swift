@@ -10,6 +10,8 @@ import UIKit
 
 class PostsTableViewCell: UITableViewCell {
     
+    static let name = "PostsTableViewCell"
+    
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var createdAtLbl: UILabel!
 
@@ -24,8 +26,9 @@ class PostsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    private func configureCell() {
-        
+    func configureCell(post: PostHits) {
+        titleLbl.text = post.title
+        createdAtLbl.text = post.createdAt
     }
     
 }

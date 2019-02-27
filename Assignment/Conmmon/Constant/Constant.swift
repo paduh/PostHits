@@ -10,6 +10,6 @@ import Foundation
 
 struct Constant {
     
-    static let baseUrl = "https://hn.algolia.com/api/v1/search_by_date?tags=story&page=1"
+    static let baseUrl = "https://hn.algolia.com/api/v1/search_by_date?tags=story&"
     
 }

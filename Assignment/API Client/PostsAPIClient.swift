@@ -20,8 +20,8 @@ class PostsAPIClient {
     }
     
     
-    func fetchPosts() -> Observable<Posts> {
+    func fetchPosts(pageNumber: Int) -> Observable<Posts> {
         
-        return provider.rx.request(PostsEndPoint.fetchPost()).debug().asObservable().map(to: Posts.self)
+        return provider.rx.request(PostsEndPoint.fetchPost(pageNumber: pageNumber)).debug().asObservable().map(to: Posts.self)
     }
 }

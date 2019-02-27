@@ -35,14 +35,18 @@ class PostsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         setupRx()
         setupView()
     }
     
     private func setupView() {
         SVProgressHUD.show()
-        viewModel.fetchPosts()
+        viewModel.fetchPosts(pageNumber: viewModel.currentPage)
+        
+        tableView.delegate = self
+        tableView.register(UINib.init(nibName: PostsTableViewCell.name, bundle: nil), forCellReuseIdentifier: PostsTableViewCell.name)
+        tableView.rowHeight = 120
+        tableView.estimatedRowHeight = UITableView.automaticDimension
     }
     
 
@@ -54,21 +58,45 @@ class PostsViewController: BaseViewController {
             .subscribe(onNext: { [weak self] (posts) in
                 guard let strongSelf = self else { return }
                 strongSelf.viewModel.postHits.accept(posts.hits)
+                strongSelf.navigationController?.navigationBar.topItem?.title = (" Listing \(strongSelf.viewModel.postHits.value.count)  Posts")
                 SVProgressHUD.dismiss()
             }, onError: { [weak self] (error) in
                 guard let strongSelf = self else { return }
+                strongSelf.showAlert(message: error.localizedDescription)
             }, onCompleted: {
                 
             }) {
                 
             }.disposed(by: bag)
         
-        viewModel
+        self.viewModel
             .postHits
             .asObservable()
-            .bind(to: tableView.rx.items(cellIdentifier: "bankListCell", cellType: PostsTableViewCell.self)) { row, bankList, cell in
-//                cell.configureCell(bankList: bankList)
-//                SVProgressHUD.dismiss()
-            }.disposed(by: bag)
+            .bind(to: self.tableView.rx.items(cellIdentifier: PostsTableViewCell.name, cellType: PostsTableViewCell.self)) { row, post, cell in
+                cell.configureCell(post: post)
+                SVProgressHUD.dismiss()
+            }.disposed(by: self.bag)
+        
+        
+    }
+    
+    private func loadMore() {
+        viewModel.isLoading = true
+       // SVProgressHUD.show()
+        self.viewModel.fetchPosts(pageNumber: self.viewModel.currentPage)
+    }
+    
+    
+}
+
+
+extension PostsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        print("EENE")
+        let lastPost = viewModel.postHits.value.count - 1
+        if !viewModel.isLoading && indexPath.row == lastPost {
+
+        }
     }
 }

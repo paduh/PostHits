@@ -11,7 +11,7 @@ import Moya
 
 enum PostsEndPoint {
     
-    case fetchPost()
+    case fetchPost(pageNumber: Int)
 }
 
 
@@ -46,8 +46,11 @@ extension PostsEndPoint: TargetType {
     
     var task: Task {
         switch self {
-        case .fetchPost:
-            return .requestPlain
+        case .fetchPost(let pageNumber):
+            let param: [String: Any] = [
+                "page": pageNumber
+            ]
+            return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         }
     }
     
