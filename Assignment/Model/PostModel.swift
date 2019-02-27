@@ -32,12 +32,10 @@ struct PostHits {
     
     var createdAt: String
     var title: String
-    var url: String
     
-    init(createdAt: String, title: String, url: String) {
+    init(createdAt: String, title: String) {
         self.createdAt = createdAt
         self.title = title
-        self.url = url
     }
 }
 
@@ -46,7 +44,6 @@ extension PostHits: Mappable {
     init(map: Mapper) throws {
         try createdAt = map.from("created_at")
         try title = map.from("title")
-        try url = map.from("url")
     }
 }
 

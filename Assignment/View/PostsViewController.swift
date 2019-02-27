@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import RxGesture
 import Moya
+import SVProgressHUD
 
 
 class PostsViewController: BaseViewController {
@@ -36,6 +37,12 @@ class PostsViewController: BaseViewController {
 
         
         setupRx()
+        setupView()
+    }
+    
+    private func setupView() {
+        SVProgressHUD.show()
+        viewModel.fetchPosts()
     }
     
 
@@ -47,6 +54,7 @@ class PostsViewController: BaseViewController {
             .subscribe(onNext: { [weak self] (posts) in
                 guard let strongSelf = self else { return }
                 strongSelf.viewModel.postHits.accept(posts.hits)
+                SVProgressHUD.dismiss()
             }, onError: { [weak self] (error) in
                 guard let strongSelf = self else { return }
             }, onCompleted: {

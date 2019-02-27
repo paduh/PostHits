@@ -21,7 +21,7 @@ class PostsViewModel {
     let apiClient: PostsAPIClient!
     
     var postsResponse = BehaviorRelay<Posts>(value: Posts(hits: []))
-    var postHits = BehaviorRelay<[PostHits]>(value: [PostHits(createdAt: "", title: "", url: "")])
+    var postHits = BehaviorRelay<[PostHits]>(value: [PostHits(createdAt: "", title: "")])
     var postsComplete: ((String?) ->())?
     
     init(apiClient: PostsAPIClient) {
