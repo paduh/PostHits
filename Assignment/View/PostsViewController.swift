@@ -13,7 +13,7 @@ import RxGesture
 import Moya
 
 
-class PostsViewController: UIViewController {
+class PostsViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -41,5 +41,26 @@ class PostsViewController: UIViewController {
 
     private func setupRx() {
         
+        viewModel
+            .postsResponse
+            .asObservable()
+            .subscribe(onNext: { [weak self] (posts) in
+                guard let strongSelf = self else { return }
+                strongSelf.viewModel.postHits.accept(posts.hits)
+            }, onError: { [weak self] (error) in
+                guard let strongSelf = self else { return }
+            }, onCompleted: {
+                
+            }) {
+                
+            }.disposed(by: bag)
+        
+        viewModel
+            .postHits
+            .asObservable()
+            .bind(to: tableView.rx.items(cellIdentifier: "bankListCell", cellType: PostsTableViewCell.self)) { row, bankList, cell in
+//                cell.configureCell(bankList: bankList)
+//                SVProgressHUD.dismiss()
+            }.disposed(by: bag)
     }
 }

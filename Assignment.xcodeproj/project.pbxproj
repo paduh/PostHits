@@ -25,6 +25,8 @@
 		CEB3966F22270614009074E6 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3966E22270614009074E6 /* PostsViewController.swift */; };
 		CEB39678222707DF009074E6 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB39676222707DF009074E6 /* PostsTableViewCell.swift */; };
 		CEB39679222707DF009074E6 /* PostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB39677222707DF009074E6 /* PostsTableViewCell.xib */; };
+		CEB3967C22270CD8009074E6 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3967B22270CD8009074E6 /* UIViewController + Extension.swift */; };
+		CEB3967F22270D78009074E6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3967E22270D78009074E6 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		CEB3966E22270614009074E6 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		CEB39676222707DF009074E6 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		CEB39677222707DF009074E6 /* PostsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsTableViewCell.xib; sourceTree = "<group>"; };
+		CEB3967B22270CD8009074E6 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		CEB3967E22270D78009074E6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		CFFE2835526280CFCDFD1449 /* Pods_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -178,6 +182,8 @@
 		CEB396622226FED9009074E6 /* Conmmon */ = {
 			isa = PBXGroup;
 			children = (
+				CEB3967D22270D55009074E6 /* Reachability */,
+				CEB3967A22270CAE009074E6 /* Extensions */,
 				CEB396632226FEDF009074E6 /* Constant */,
 			);
 			path = Conmmon;
@@ -238,6 +244,22 @@
 				CEB39677222707DF009074E6 /* PostsTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CEB3967A22270CAE009074E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3967B22270CD8009074E6 /* UIViewController + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CEB3967D22270D55009074E6 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3967E22270D78009074E6 /* Reachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		D42F42A671862BEDDE851DF0 /* Pods */ = {
@@ -506,6 +528,8 @@
 				CEB3966B22270106009074E6 /* PostsAPIClient.swift in Sources */,
 				CEB3966F22270614009074E6 /* PostsViewController.swift in Sources */,
 				CEB396342226FDDF009074E6 /* AppDelegate.swift in Sources */,
+				CEB3967C22270CD8009074E6 /* UIViewController + Extension.swift in Sources */,
+				CEB3967F22270D78009074E6 /* Reachability.swift in Sources */,
 				CEB39678222707DF009074E6 /* PostsTableViewCell.swift in Sources */,
 				CEB396652226FEF1009074E6 /* Constant.swift in Sources */,
 				CEB3966D222703F5009074E6 /* PostsViewModel.swift in Sources */,
