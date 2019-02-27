@@ -11,7 +11,7 @@
 		A9C3AD8753C1487FAB9A2825 /* Pods_AssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E24C43F321768176656D052 /* Pods_AssignmentUITests.framework */; };
 		BD40787CE30587CB143B6820 /* Pods_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFE2835526280CFCDFD1449 /* Pods_AssignmentTests.framework */; };
 		CEB396342226FDDF009074E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB396332226FDDF009074E6 /* AppDelegate.swift */; };
-		CEB396362226FDDF009074E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB396352226FDDF009074E6 /* ViewController.swift */; };
+		CEB396362226FDDF009074E6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB396352226FDDF009074E6 /* BaseViewController.swift */; };
 		CEB396392226FDDF009074E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB396372226FDDF009074E6 /* Main.storyboard */; };
 		CEB3963B2226FDE1009074E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3963A2226FDE1009074E6 /* Assets.xcassets */; };
 		CEB3963E2226FDE1009074E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB3963C2226FDE1009074E6 /* LaunchScreen.storyboard */; };
@@ -22,6 +22,9 @@
 		CEB3966922270019009074E6 /* PostsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3966822270019009074E6 /* PostsEndPoint.swift */; };
 		CEB3966B22270106009074E6 /* PostsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3966A22270106009074E6 /* PostsAPIClient.swift */; };
 		CEB3966D222703F5009074E6 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3966C222703F5009074E6 /* PostsViewModel.swift */; };
+		CEB3966F22270614009074E6 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3966E22270614009074E6 /* PostsViewController.swift */; };
+		CEB39678222707DF009074E6 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB39676222707DF009074E6 /* PostsTableViewCell.swift */; };
+		CEB39679222707DF009074E6 /* PostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB39677222707DF009074E6 /* PostsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +55,7 @@
 		CC1E3435BDB047F918F220A2 /* Pods-Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Assignment/Pods-Assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		CEB396302226FDDF009074E6 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB396332226FDDF009074E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEB396352226FDDF009074E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEB396352226FDDF009074E6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CEB396382226FDDF009074E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEB3963A2226FDE1009074E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEB3963D2226FDE1009074E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,6 +71,9 @@
 		CEB3966822270019009074E6 /* PostsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsEndPoint.swift; sourceTree = "<group>"; };
 		CEB3966A22270106009074E6 /* PostsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPIClient.swift; sourceTree = "<group>"; };
 		CEB3966C222703F5009074E6 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		CEB3966E22270614009074E6 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		CEB39676222707DF009074E6 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		CEB39677222707DF009074E6 /* PostsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsTableViewCell.xib; sourceTree = "<group>"; };
 		CFFE2835526280CFCDFD1449 /* Pods_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,10 +140,15 @@
 		CEB396322226FDDF009074E6 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				CEB39675222707BC009074E6 /* Cells */,
+				CEB39674222706DA009074E6 /* End Point */,
+				CEB39673222706D3009074E6 /* API Client */,
+				CEB39672222706C8009074E6 /* ViewModel */,
+				CEB39671222706C2009074E6 /* View */,
+				CEB39670222706BB009074E6 /* Model */,
 				CEB396622226FED9009074E6 /* Conmmon */,
-				CEB396612226FED1009074E6 /* Posts */,
 				CEB396332226FDDF009074E6 /* AppDelegate.swift */,
-				CEB396352226FDDF009074E6 /* ViewController.swift */,
+				CEB396352226FDDF009074E6 /* BaseViewController.swift */,
 				CEB396372226FDDF009074E6 /* Main.storyboard */,
 				CEB3963A2226FDE1009074E6 /* Assets.xcassets */,
 				CEB3963C2226FDE1009074E6 /* LaunchScreen.storyboard */,
@@ -164,17 +175,6 @@
 			path = AssignmentUITests;
 			sourceTree = "<group>";
 		};
-		CEB396612226FED1009074E6 /* Posts */ = {
-			isa = PBXGroup;
-			children = (
-				CEB396662226FF62009074E6 /* PostModel.swift */,
-				CEB3966822270019009074E6 /* PostsEndPoint.swift */,
-				CEB3966A22270106009074E6 /* PostsAPIClient.swift */,
-				CEB3966C222703F5009074E6 /* PostsViewModel.swift */,
-			);
-			path = Posts;
-			sourceTree = "<group>";
-		};
 		CEB396622226FED9009074E6 /* Conmmon */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +189,55 @@
 				CEB396642226FEF1009074E6 /* Constant.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		CEB39670222706BB009074E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEB396662226FF62009074E6 /* PostModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEB39671222706C2009074E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3966E22270614009074E6 /* PostsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEB39672222706C8009074E6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3966C222703F5009074E6 /* PostsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CEB39673222706D3009074E6 /* API Client */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3966A22270106009074E6 /* PostsAPIClient.swift */,
+			);
+			path = "API Client";
+			sourceTree = "<group>";
+		};
+		CEB39674222706DA009074E6 /* End Point */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3966822270019009074E6 /* PostsEndPoint.swift */,
+			);
+			path = "End Point";
+			sourceTree = "<group>";
+		};
+		CEB39675222707BC009074E6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CEB39676222707DF009074E6 /* PostsTableViewCell.swift */,
+				CEB39677222707DF009074E6 /* PostsTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D42F42A671862BEDDE851DF0 /* Pods */ = {
@@ -315,6 +364,7 @@
 				CEB3963E2226FDE1009074E6 /* LaunchScreen.storyboard in Resources */,
 				CEB3963B2226FDE1009074E6 /* Assets.xcassets in Resources */,
 				CEB396392226FDDF009074E6 /* Main.storyboard in Resources */,
+				CEB39679222707DF009074E6 /* PostsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,10 +501,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB3966922270019009074E6 /* PostsEndPoint.swift in Sources */,
-				CEB396362226FDDF009074E6 /* ViewController.swift in Sources */,
+				CEB396362226FDDF009074E6 /* BaseViewController.swift in Sources */,
 				CEB396672226FF62009074E6 /* PostModel.swift in Sources */,
 				CEB3966B22270106009074E6 /* PostsAPIClient.swift in Sources */,
+				CEB3966F22270614009074E6 /* PostsViewController.swift in Sources */,
 				CEB396342226FDDF009074E6 /* AppDelegate.swift in Sources */,
+				CEB39678222707DF009074E6 /* PostsTableViewCell.swift in Sources */,
 				CEB396652226FEF1009074E6 /* Constant.swift in Sources */,
 				CEB3966D222703F5009074E6 /* PostsViewModel.swift in Sources */,
 			);
