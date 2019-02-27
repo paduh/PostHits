@@ -21,6 +21,7 @@
 		CEB396672226FF62009074E6 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB396662226FF62009074E6 /* PostModel.swift */; };
 		CEB3966922270019009074E6 /* PostsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3966822270019009074E6 /* PostsEndPoint.swift */; };
 		CEB3966B22270106009074E6 /* PostsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3966A22270106009074E6 /* PostsAPIClient.swift */; };
+		CEB3966D222703F5009074E6 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3966C222703F5009074E6 /* PostsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		CEB396662226FF62009074E6 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		CEB3966822270019009074E6 /* PostsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsEndPoint.swift; sourceTree = "<group>"; };
 		CEB3966A22270106009074E6 /* PostsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPIClient.swift; sourceTree = "<group>"; };
+		CEB3966C222703F5009074E6 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		CFFE2835526280CFCDFD1449 /* Pods_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 				CEB396662226FF62009074E6 /* PostModel.swift */,
 				CEB3966822270019009074E6 /* PostsEndPoint.swift */,
 				CEB3966A22270106009074E6 /* PostsAPIClient.swift */,
+				CEB3966C222703F5009074E6 /* PostsViewModel.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				CEB3966B22270106009074E6 /* PostsAPIClient.swift in Sources */,
 				CEB396342226FDDF009074E6 /* AppDelegate.swift in Sources */,
 				CEB396652226FEF1009074E6 /* Constant.swift in Sources */,
+				CEB3966D222703F5009074E6 /* PostsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
